@@ -1,0 +1,23 @@
+{% extends "studentmanagementapp/base.html" %}
+
+ {% block title %}
+   Search
+ {% endblock title %}
+
+ {% block content %}
+ <form class="add_your_class" method="GET" action="" >
+  <label for="search_student_id">Student ID</label><input class="add_your_class" type="search" name="search_student_id"> <br>
+  <label for="search_student_name">Student Name</label><input class="add_your_class" type="search" name="search_student_name"> <br>
+  <button class="add_your_class" type="submit"> Search </button><br>
+</form>
+<h2>Click on names to get Detail info of student</h2>
+{% for object in all_search_results %}
+<a href="{% url 'student-detail' pk=object.id %}">
+  {{object.first_name}}
+  {{object.last_name}}
+
+</a><br>
+{% empty %}
+    no results
+{% endfor %}
+ {% endblock content %}

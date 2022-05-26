@@ -1,0 +1,18 @@
+{% extends "studentmanagementapp/base.html" %}
+
+ {% block title %}
+   Student new
+ {% endblock title %}
+
+ {% block content %}
+
+      Full Name : {{ object.first_name }} {{ object.last_name }} <br>
+      Student ID :{{ object.id }} <br>
+      Student Email address : {{ object.email }} <br>
+      Student Gender : {{ object.gender }} <br>
+      School Name : {{ object.school.school }} <br>
+      School Phone number : {{ object.school.phone }} <br>
+      Books Read by student : {{ object.books.title }} <br>
+      Total number of pages read : {{ object.books.number_of_pages }} <br>
+
+ {% endblock content %}

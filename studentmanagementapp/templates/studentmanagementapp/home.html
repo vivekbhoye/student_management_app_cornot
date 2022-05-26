@@ -1,0 +1,46 @@
+{% extends "studentmanagementapp/base.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a class="btn btn-primary" href="{% url 'student-create' %}" role="button">Create New Student</a>
+    </div>
+    <div class="col-sm">
+      <a class="btn btn-primary" href="{% url 'school-create' %}" role="button">Create New School</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <a class="btn btn-primary" href="{% url 'book-create' %}" role="button">Create New Book</a>
+    </div>
+    <div class="col-sm">
+      <a class="btn btn-primary" href="{% url 'search' %}" role="button">Search</a>
+    </div>
+  </div>
+</div>
+
+<p>
+  Problem Statement: <br>
+  1. you can check table with sqlite viewer
+  admin access credential is in read me file <br>
+
+  2. Url : <br>
+  http://127.0.0.1:8000/student/student_id/     <br>
+  example : http://127.0.0.1:8000/student/1/   <br>
+
+  3. click on above search button 
+  URL : http://127.0.0.1:8000/search/
+
+  4. click on create New student to add new student if school or book is not added we can add that too
+    URL : http://127.0.0.1:8000/student/create/
+
+</p>
+
+{% endblock content %}

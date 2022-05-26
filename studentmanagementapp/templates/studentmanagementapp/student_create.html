@@ -1,0 +1,18 @@
+{% extends "studentmanagementapp/base.html" %}
+
+{% block title %}
+New Student 
+{% endblock title %}
+
+{% block content %}
+<h2> New Student </h2><br>
+
+<form action="" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <!-- {{form.school}} -->
+  <a href="{% url 'school-create' %}"> school not Listed ? Add new School </a> <br>
+  <a href="{% url 'book-create' %}"> Book not Listed ? Add new School </a> <br>
+  <button type="submit">Create Student</button>
+</form>
+{% endblock content %}
